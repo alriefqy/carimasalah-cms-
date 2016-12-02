@@ -1,4 +1,4 @@
 <?php
-define('root','http://localhost/cyber-tech/');
-define('adm','http://localhost/cyber-tech/admin/');
+define('root','http://localhost/carimasalah-cms-/');
+define('adm','http://localhost/carimasalah-cms-/admin/');
 ?>
