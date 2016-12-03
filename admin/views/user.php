@@ -35,15 +35,16 @@ echo '<br><br><br><br>
         <center>
         <form action="'.$aksi.'edit" enctype="multipart/form-data" method="POST" name="form" class="contact_form">
             <p>User</p>
-            <input class="form-control" type="text" placeholder="'.$data['user_name'].'" name="user_name">
+            <input class="form-control" type="text" value="'.$data['user_name'].'" name="user_name">
             <p>Nama</p>
-            <input class="form-control" type="text" placeholder="'.$data['name'].'" name="name">
+            <input class="form-control" type="text" value="'.$data['name'].'" name="name">
             <p>College</p>
-            <input class="form-control" type="text" name="college" placeholder="'.$data['college'].'">
+            <input class="form-control" type="text" name="college" value="'.$data['college'].'">
             <p>Profil</p>
-            <textarea name="profil" class="form-control" cols="30" rows="10" placeholder="'.$data['profil'].'"></textarea>
+            <textarea name="profil" class="form-control" cols="30" rows="10" value="'.$data['profil'].'">'.$data['profil'].'</textarea>
             <input type="hidden" value="'.$data['user_id'].'" name="id">
             <p><center>Foto</center></p>
+            <input type="hidden" name="file" value="'.$data['foto'].'">
             <input class="form-control" type="file" name="file">
             <input type="submit" name="edit" value="Submit">
           </form>

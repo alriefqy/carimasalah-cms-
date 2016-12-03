@@ -57,11 +57,11 @@
 			
 			$id = $_GET['id'];
 			
-			$data = $news->getPengumumanById($id);
+			$data = $news->getArtikelById($id);
 			//echo "<br><br>work here" ;
 			$news->deleteFile("../../assets/images/", $data['foto']);
-			$artikel->delete_pengumuman($id);
-			header("location:".adm);
+			$artikel->delete_artikel($id);
+			header("location:".adm.'news');
 		}
 
 

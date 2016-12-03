@@ -20,12 +20,13 @@
 			$college = $_POST['college'];
 			$profil = $_POST['profil'];
 			//$link = $artikel->changeLink($judul);
-			$foto = "";
-
-				if ($_FILES['file']['tmp_name'] != "") {
-					$foto = $artikel->uploadImageToFolder('../../assets/user/', $_FILES['file'], $user);	//upload
-				}
-
+			$foto = $_POST['file'];
+			//$foto = "";
+			if ($_FILES['file']['tmp_name'] != "")
+			{
+				$artikel->deleteFile('../../asset/berita/',$foto);
+				$foto = $artikel->uploadFile('../../assets/user/', $_FILES['file'],$id);
+			}
 			$updateProfil = $akun->updateProfil($id,$user,$name,$college,$profil,$foto);
 			header("location:".adm.'login');
 		}

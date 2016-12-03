@@ -17,6 +17,8 @@
 			
 			$level = $_POST['level'];
 			$college = $_POST['college'];
+			$foto = 'ORIGIN.PNG';
+			$profil = 'A new member';
 			//$repassword = $artikel->changeLink($judul);
 			$getUser = $akun->getUserByUserName($user);
 			//echo $getUser['user_id'];
@@ -32,7 +34,7 @@
 				if ($password == $repassword)
 				{
 				
-				$adduser = $register->add_user($user,$password,$name,$college,$level);
+				$adduser = $register->add_user($user,$password,$name,$college,$foto,$profil,$level);
 				header("location:".adm."login");
 				echo 'Acount created';
 				}

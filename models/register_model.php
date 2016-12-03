@@ -120,17 +120,18 @@
 			return $query->fetchAll(PDO::FETCH_ASSOC);
 
 		}	
-		public function add_user($user,$password,$name,$college,$level)
+		public function add_user($user,$password,$name,$college,$foto,$profil,$level)
 		{
 			echo 'still work';
-			$query = $this->db->prepare("INSERT INTO `user` (`user_name`,`password`,`name`,`college`,`level`) VALUES (?,?,?,?,?)");
+			$query = $this->db->prepare("INSERT INTO `user` (`user_name`,`password`,`name`,`college`,`foto`,`profil`,`level`) VALUES (?,?,?,?,?,?,?)");
 
 			$query->bindValue(1, $user);
 			$query->bindValue(2, $password);
 			$query->bindValue(3, $name);
 			$query->bindValue(4, $college);
-			$query->bindValue(5, $level);
-		
+			$query->bindValue(5, $foto);
+			$query->bindValue(6, $profil);
+			$query->bindValue(7, $level);
 			try
 			{
 				$query->execute();
